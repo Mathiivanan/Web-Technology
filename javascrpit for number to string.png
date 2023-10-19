@@ -1,0 +1,4 @@
+let number = 6789;
+let numberString = String(number);
+
+console.log("Number as String: " + numberString);
