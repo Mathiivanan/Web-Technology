@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+     <person>
+          <name>Nirja Shaha</name>
+          <education>MCA</education>
+          <City>Pune</City>
+     </person>
+     <person>
+          <name>Prashant Saxena</name>
+          <education>B.Tech</education>
+          <City>Pune</City>
+     </person>
+</people>
