@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        #slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        #radio-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #333;
+        }
+
+        #image-map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slider-container">
+    <div id="slider">
+        <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <div id="radio-buttons">
+        <input type="radio" id="radio1" name="slider" checked>
+        <label for="radio1"></label>
+        <input type="radio" id="radio2" name="slider">
+        <label for="radio2"></label>
+        <input type="radio" id="radio3" name="slider">
+        <label for="radio3"></label>
+        <!-- Add more radio buttons as needed -->
+    </div>
+
+    <map name="image-map" id="image-map">
+        <area shape="rect" coords="0,0,200,200" alt="Image 1" href="image1.html">
+        <area shape="rect" coords="201,0,400,200" alt="Image 2" href="image2.html">
+        <area shape="rect" coords="401,0,600,200" alt="Image 3" href="image3.html">
+        <!-- Add more image map areas as needed -->
+    </map>
+</div>
+
+<script>
+    const slider = document.getElementById('slider');
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    const imageMap = document.getElementById('image-map');
+
+    radioButtons.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            const percentage = -index * 100;
+            slider.style.transform = `translateX(${percentage}%)`;
+        });
+    });
+
+    // Uncomment the following lines if you want to navigate to a different page on image click
+    // imageMap.addEventListener('click', (event) => {
+    //     const target = event.target;
+    //     if (target.tagName.toLowerCase() === 'area') {
+    //         window.location.href = target.href;
+    //     }
+    // });
+</script>
+
+</body>
+</html>
