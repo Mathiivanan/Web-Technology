@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Styled Elements</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to Our Website</h1>
+        <p>Explore and enjoy!</p>
+    </div>
+
+    <div class="content">
+        <section class="main-section">
+            <h2>Main Section</h2>
+            <p>This is the main content of the page.</p>
+            <a href="#" class="button">Read More</a>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Additional information goes here.</p>
+        </aside>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
