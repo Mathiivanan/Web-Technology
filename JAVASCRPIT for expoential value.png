@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponential Calculator</title>
+</head>
+<body>
+
+<h1>Exponential Calculator</h1>
+
+<label for="base">Enter the base value:</label>
+<input type="number" id="base" placeholder="Enter base value">
+
+<label for="exponent">Enter the exponent value:</label>
+<input type="number" id="exponent" placeholder="Enter exponent value">
+
+<button onclick="calculateExponential()">Calculate Exponential</button>
+
+<p id="result"></p>
+
+<script>
+    function calculateExponential() {
+        // Get values from input fields
+        var base = parseFloat(document.getElementById('base').value);
+        var exponent = parseFloat(document.getElementById('exponent').value);
+
+        // Check if the input is valid
+        if (isNaN(base) || isNaN(exponent)) {
+            alert('Please enter valid numeric values for base and exponent.');
+            return;
+        }
+
+        // Calculate the exponential value
+        var result = Math.exp(exponent * Math.log(base));
+
+        // Display the result
+        document.getElementById('result').innerText = 'Exponential Value: ' + result;
+    }
+</script>
+
+</body>
+</html>
