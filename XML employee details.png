@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<class>
+     <Employee Id="101">
+          <firstname>Nirja</firstname>
+          <lastname>Shah</lastname>
+          <salary>85000</salary>
+     </Employee>
+     <Employee Id="102">
+          <firstname>Prashant</firstname>
+          <lastname>Saxena</lastname>
+          <salary>95000</salary>
+     </Employee>
+</class>
