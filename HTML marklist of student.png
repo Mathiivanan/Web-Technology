@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark List</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Class Test Mark List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Subject 1</th>
+                <th>Subject 2</th>
+                <th>Subject 3</th>
+                <th>Total Marks</th>
+            </tr>
+        </thead>
+        <tbody id="markTableBody">
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Sample data (replace this with your actual data)
+        const studentMarks = [
+            { name: 'Student 1', subject1: 85, subject2: 90, subject3: 78 },
+            { name: 'Student 2', subject1: 76, subject2: 88, subject3: 92 },
+            { name: 'Student 3', subject1: 92, subject2: 78, subject3: 85 },
+            // Add more students as needed
+        ];
+
+        // Function to generate table rows dynamically
+        function generateTableRows() {
+            const tableBody = document.getElementById('markTableBody');
+
+            studentMarks.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${student.name}</td>
+                    <td>${student.subject1}</td>
+                    <td>${student.subject2}</td>
+                    <td>${student.subject3}</td>
+                    <td>${student.subject1 + student.subject2 + student.subject3}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Call the function to generate table rows
+        generateTableRows();
+    </script>
+
+</body>
+</html>
