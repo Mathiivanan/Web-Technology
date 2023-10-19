@@ -1,0 +1,11 @@
+function limitDecimal(number, decimalPlaces) {
+    // Using toFixed to limit the number of decimal places
+    return Number(number.toFixed(decimalPlaces));
+}
+
+// Example usage:
+let originalNumber = 123.456789;
+let formattedNumber = limitDecimal(originalNumber, 2); // Limiting to 2 decimal places
+
+console.log("Original Number: " + originalNumber);
+console.log("Formatted Number: " + formattedNumber);
