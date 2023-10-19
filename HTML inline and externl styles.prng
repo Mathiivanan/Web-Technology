@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="external-style.css">
+
+    <style>
+        /* Internal Style Sheet */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Program with Inline, Internal, and External Styles</h1>
+
+    <!-- Inline Styles -->
+    <div style="border: 1px solid #ccc; padding: 10px; margin: 20px;">
+        <p style="color: #666; font-style: italic;">This is a paragraph with inline styles.</p>
+    </div>
+
+    <p>This is a paragraph with internal styles.</p>
+
+    <!-- External Styles -->
+    <div class="external-style">
+        <p>This is a paragraph with external styles.</p>
+    </div>
+
+</body>
+</html>
