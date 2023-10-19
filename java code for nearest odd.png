@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Odd Numbers</title>
+</head>
+<body>
+    <script>
+        function getNearestOddNumbers() {
+            // Prompt the user to enter numbers
+            var inputString = prompt("Enter a list of numbers separated by commas:");
+
+            // Split the input string into an array of numbers
+            var numbers = inputString.split(',').map(Number);
+
+            // Display the nearest odd numbers for each input
+            for (var i = 0; i < numbers.length; i++) {
+                var nearestOdd = findNearestOdd(numbers[i]);
+                console.log("Nearest odd number to " + numbers[i] + " is: " + nearestOdd);
+            }
+        }
+
+        function findNearestOdd(number) {
+            // Find the nearest odd number
+            var lowerOdd = Math.floor(number / 2) * 2 + 1;
+            var upperOdd = Math.ceil(number / 2) * 2 - 1;
+
+            // Determine which odd number is closer
+            if (Math.abs(number - lowerOdd) < Math.abs(number - upperOdd)) {
+                return lowerOdd;
+            } else {
+                return upperOdd;
+            }
+        }
+
+        // Call the function when the page is loaded
+        getNearestOddNumbers();
+    </script>
+</body>
+</html>
