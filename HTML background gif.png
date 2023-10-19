@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background: url('your-background.gif') center center fixed; /* Replace 'your-background.gif' with the path to your GIF */
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.5s ease; /* Add a smooth transition effect */
+        }
+
+        /* Optional: Add additional styling */
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+    <script>
+        // JavaScript can be added here for additional functionality
+    </script>
+    <title>Background GIF Example</title>
+</head>
+<body>
+    <h1>Your Webpage Content Goes Here</h1>
+</body>
+</html>
